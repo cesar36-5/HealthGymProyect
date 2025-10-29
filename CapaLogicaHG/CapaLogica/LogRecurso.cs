@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HealthGym.CapaLogica
 {
-    internal class LogRecurso
+    public class LogRecurso
     {
         #region Singleton
         public static readonly LogRecurso _instancia = new LogRecurso();

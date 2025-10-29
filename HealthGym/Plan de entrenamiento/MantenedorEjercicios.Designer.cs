@@ -30,6 +30,8 @@
         {
             Dgv_Ejercicios = new DataGridView();
             Gbox_Ejercicio = new GroupBox();
+            label5 = new Label();
+            comboBox1 = new ComboBox();
             label4 = new Label();
             textBox1 = new TextBox();
             label3 = new Label();
@@ -41,8 +43,6 @@
             Btn_Agregar = new Button();
             Btn_Editar = new Button();
             Btn_Eliminar = new Button();
-            label5 = new Label();
-            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)Dgv_Ejercicios).BeginInit();
             Gbox_Ejercicio.SuspendLayout();
             SuspendLayout();
@@ -78,6 +78,24 @@
             Gbox_Ejercicio.TabIndex = 1;
             Gbox_Ejercicio.TabStop = false;
             Gbox_Ejercicio.Text = "Datos Ejercicio";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(352, 19);
+            label5.Name = "label5";
+            label5.Size = new Size(51, 15);
+            label5.TabIndex = 9;
+            label5.Text = "Enfoque";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Facil", "Medio", "Dificil" });
+            comboBox1.Location = new Point(352, 37);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 8;
             // 
             // label4
             // 
@@ -171,24 +189,6 @@
             Btn_Eliminar.TabIndex = 4;
             Btn_Eliminar.Text = "Eliminar";
             Btn_Eliminar.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(352, 19);
-            label5.Name = "label5";
-            label5.Size = new Size(58, 15);
-            label5.TabIndex = 9;
-            label5.Text = "Dificultad";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Facil", "Medio", "Dificil" });
-            comboBox1.Location = new Point(352, 37);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 8;
             // 
             // MantenedorEjercicios
             // 
