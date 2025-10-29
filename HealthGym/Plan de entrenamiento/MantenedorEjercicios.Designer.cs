@@ -1,0 +1,206 @@
+﻿namespace HealthGym.Plan_de_entrenamiento
+{
+    partial class MantenedorEjercicios
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            Dgv_Ejercicios = new DataGridView();
+            Gbox_Ejercicio = new GroupBox();
+            Cbox_Dificultad = new ComboBox();
+            label2 = new Label();
+            Tbox_Nombre = new TextBox();
+            label1 = new Label();
+            Tbox_Id = new TextBox();
+            Btn_Agregar = new Button();
+            Btn_Editar = new Button();
+            Btn_Eliminar = new Button();
+            label3 = new Label();
+            label4 = new Label();
+            textBox1 = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)Dgv_Ejercicios).BeginInit();
+            Gbox_Ejercicio.SuspendLayout();
+            SuspendLayout();
+            // 
+            // Dgv_Ejercicios
+            // 
+            Dgv_Ejercicios.AllowUserToAddRows = false;
+            Dgv_Ejercicios.AllowUserToDeleteRows = false;
+            Dgv_Ejercicios.AllowUserToResizeColumns = false;
+            Dgv_Ejercicios.AllowUserToResizeRows = false;
+            Dgv_Ejercicios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Dgv_Ejercicios.Location = new Point(12, 12);
+            Dgv_Ejercicios.Name = "Dgv_Ejercicios";
+            Dgv_Ejercicios.ReadOnly = true;
+            Dgv_Ejercicios.Size = new Size(796, 282);
+            Dgv_Ejercicios.TabIndex = 0;
+            // 
+            // Gbox_Ejercicio
+            // 
+            Gbox_Ejercicio.Controls.Add(label4);
+            Gbox_Ejercicio.Controls.Add(textBox1);
+            Gbox_Ejercicio.Controls.Add(label3);
+            Gbox_Ejercicio.Controls.Add(Cbox_Dificultad);
+            Gbox_Ejercicio.Controls.Add(label2);
+            Gbox_Ejercicio.Controls.Add(Tbox_Nombre);
+            Gbox_Ejercicio.Controls.Add(label1);
+            Gbox_Ejercicio.Controls.Add(Tbox_Id);
+            Gbox_Ejercicio.Location = new Point(12, 300);
+            Gbox_Ejercicio.Name = "Gbox_Ejercicio";
+            Gbox_Ejercicio.Size = new Size(649, 138);
+            Gbox_Ejercicio.TabIndex = 1;
+            Gbox_Ejercicio.TabStop = false;
+            Gbox_Ejercicio.Text = "Datos Ejercicio";
+            // 
+            // Cbox_Dificultad
+            // 
+            Cbox_Dificultad.FormattingEnabled = true;
+            Cbox_Dificultad.Items.AddRange(new object[] { "Facil", "Medio", "Dificil" });
+            Cbox_Dificultad.Location = new Point(225, 37);
+            Cbox_Dificultad.Name = "Cbox_Dificultad";
+            Cbox_Dificultad.Size = new Size(121, 23);
+            Cbox_Dificultad.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(86, 19);
+            label2.Name = "label2";
+            label2.Size = new Size(51, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Nombre";
+            // 
+            // Tbox_Nombre
+            // 
+            Tbox_Nombre.Location = new Point(86, 37);
+            Tbox_Nombre.Name = "Tbox_Nombre";
+            Tbox_Nombre.Size = new Size(133, 23);
+            Tbox_Nombre.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(19, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(17, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Id";
+            // 
+            // Tbox_Id
+            // 
+            Tbox_Id.Location = new Point(19, 37);
+            Tbox_Id.Name = "Tbox_Id";
+            Tbox_Id.Size = new Size(61, 23);
+            Tbox_Id.TabIndex = 0;
+            // 
+            // Btn_Agregar
+            // 
+            Btn_Agregar.Location = new Point(667, 309);
+            Btn_Agregar.Name = "Btn_Agregar";
+            Btn_Agregar.Size = new Size(141, 23);
+            Btn_Agregar.TabIndex = 2;
+            Btn_Agregar.Text = "Agregar";
+            Btn_Agregar.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Editar
+            // 
+            Btn_Editar.Location = new Point(667, 338);
+            Btn_Editar.Name = "Btn_Editar";
+            Btn_Editar.Size = new Size(141, 23);
+            Btn_Editar.TabIndex = 3;
+            Btn_Editar.Text = "Editar";
+            Btn_Editar.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Eliminar
+            // 
+            Btn_Eliminar.Location = new Point(667, 367);
+            Btn_Eliminar.Name = "Btn_Eliminar";
+            Btn_Eliminar.Size = new Size(141, 23);
+            Btn_Eliminar.TabIndex = 4;
+            Btn_Eliminar.Text = "Eliminar";
+            Btn_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(225, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 15);
+            label3.TabIndex = 5;
+            label3.Text = "Dificultad";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(19, 68);
+            label4.Name = "label4";
+            label4.Size = new Size(110, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Descripcion tecnica";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(19, 86);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(611, 23);
+            textBox1.TabIndex = 6;
+            // 
+            // MantenedorEjercicios
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(820, 450);
+            Controls.Add(Btn_Eliminar);
+            Controls.Add(Btn_Editar);
+            Controls.Add(Btn_Agregar);
+            Controls.Add(Gbox_Ejercicio);
+            Controls.Add(Dgv_Ejercicios);
+            Name = "MantenedorEjercicios";
+            Text = "MantenedorEjercicios";
+            Load += MantenedorEjercicios_Load;
+            ((System.ComponentModel.ISupportInitialize)Dgv_Ejercicios).EndInit();
+            Gbox_Ejercicio.ResumeLayout(false);
+            Gbox_Ejercicio.PerformLayout();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private DataGridView Dgv_Ejercicios;
+        private GroupBox Gbox_Ejercicio;
+        private Button Btn_Agregar;
+        private Button Btn_Editar;
+        private Button Btn_Eliminar;
+        private TextBox Tbox_Id;
+        private Label label1;
+        private Label label2;
+        private TextBox Tbox_Nombre;
+        private ComboBox Cbox_Dificultad;
+        private Label label4;
+        private TextBox textBox1;
+        private Label label3;
+    }
+}
