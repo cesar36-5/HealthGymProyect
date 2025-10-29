@@ -5,6 +5,7 @@ using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -135,7 +136,7 @@ namespace HealthGym.CapaDatos
             {
                 using (SqlConnection cn = Conexion.Instancia.Conectar())
                 {
-                    cmd = new SqlCommand("AgregarEjercicio", cn);
+                    cmd = new SqlCommand("EditarEjercicio", cn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@id", ejercicio.Id);
@@ -143,6 +144,36 @@ namespace HealthGym.CapaDatos
                     cmd.Parameters.AddWithValue("@att", ejercicio.AtributoTecnico);
                     cmd.Parameters.AddWithValue("@desc", ejercicio.Descripcion);
                     cmd.Parameters.AddWithValue("@Nombre", ejercicio.Nombre);
+
+                    cn.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    inserta = i > 0;
+                }
+            }
+            catch (SqlException ex)
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                Trace.WriteLine(ex.Message + "ERROR");
+            }
+
+            return inserta;
+        }
+        public bool EliminarEjercicio(int id)
+        {
+            SqlCommand cmd = null;
+            bool inserta = false;
+
+            try
+            {
+                using (SqlConnection cn = Conexion.Instancia.Conectar())
+                {
+                    cmd = new SqlCommand("EliminarEjercicio", cn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@id", id);
 
                     cn.Open();
                     int i = cmd.ExecuteNonQuery();

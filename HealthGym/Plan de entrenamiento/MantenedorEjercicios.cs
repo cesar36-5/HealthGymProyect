@@ -125,6 +125,7 @@ namespace HealthGym.Plan_de_entrenamiento
             if (ejercicioSeleccionado != null)
             {
                 Tbox_Id.Enabled = false;
+                Btn_Eliminar.Enabled = true;
                 CargarEjercicio(ejercicioSeleccionado.Id);
             }
         }
@@ -140,6 +141,8 @@ namespace HealthGym.Plan_de_entrenamiento
                 {
                     throw new Exception("No se encontro un ejercicio con ese id");
                 }
+
+                Tbox_Id.Text = e.Id.ToString();
 
                 Btn_Agregar.Enabled = false;
                 Btn_Editar.Enabled = true;
@@ -180,6 +183,10 @@ namespace HealthGym.Plan_de_entrenamiento
             Btn_Agregar.Enabled = true;
             Btn_Editar.Enabled = false;
             Btn_Eliminar.Enabled = false;
+            LimpiarCuadros();
+        }
+        private void LimpiarCuadros()
+        {
             Tbox_Nombre.Text = "";
             Tbox_Desc.Text = "";
             Cbox_Enfoque.SelectedItem = 0;
@@ -189,6 +196,140 @@ namespace HealthGym.Plan_de_entrenamiento
         private void Cbox_Dificultad_SelectedIndexChanged(object sender, EventArgs e)
         {
             //MessageBox.Show(Cbox_Dificultad.SelectedIndex.ToString());
+        }
+
+        private void Btn_Agregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EntEjercicio ej = new EntEjercicio();
+                if (string.IsNullOrWhiteSpace(Tbox_Desc.Text) || string.IsNullOrWhiteSpace(Tbox_Nombre.Text))
+                {
+                    throw new Exception("Debe colocar un nombre y descripcion");
+                }
+                if (Tbox_Nombre.Text.Length > 512)
+                {
+                    throw new Exception("El nombre es demasiado largo");
+                }
+                if (Tbox_Desc.Text.Length > 1024)
+                {
+                    throw new Exception("La descripcion es demasiado larga");
+                }
+
+                ej.Nombre = Tbox_Nombre.Text;
+                ej.Descripcion = Tbox_Desc.Text;
+                ej.Dificultad = (Cbox_Dificultad.SelectedIndex + 1).ToString();
+                if (Cbox_Enfoque.SelectedIndex == 0)
+                {
+                    ej.AtributoTecnico = false;
+                }
+                else
+                {
+                    ej.AtributoTecnico = true;
+                }
+                if (LogEjercicio.Instancia.AgregarEjercicio(ej))
+                {
+                    MessageBox.Show("El ejercicio se agrego");
+                }
+                else
+                {
+                    MessageBox.Show("El ejercicio no se pudo agregar");
+                }
+                CargarEjercicios();
+                LimpiarCuadros();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Btn_Editar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EntEjercicio ej = new EntEjercicio();
+                if (int.TryParse(Tbox_Id.Text, out int salida))
+                {
+                    ej.Id = int.Parse(Tbox_Id.Text);
+
+                    if (string.IsNullOrWhiteSpace(Tbox_Desc.Text) || string.IsNullOrWhiteSpace(Tbox_Nombre.Text))
+                    {
+                        throw new Exception("Debe colocar un nombre y descripcion");
+                    }
+                    if (Tbox_Nombre.Text.Length > 512)
+                    {
+                        throw new Exception("El nombre es demasiado largo");
+                    }
+                    if (Tbox_Desc.Text.Length > 1024)
+                    {
+                        throw new Exception("La descripcion es demasiado larga");
+                    }
+
+                    ej.Nombre = Tbox_Nombre.Text;
+                    ej.Descripcion = Tbox_Desc.Text;
+                    ej.Dificultad = (Cbox_Dificultad.SelectedIndex + 1).ToString();
+                    if (Cbox_Enfoque.SelectedIndex == 0)
+                    {
+                        ej.AtributoTecnico = false;
+                    }
+                    else
+                    {
+                        ej.AtributoTecnico = true;
+                    }
+                    if (LogEjercicio.Instancia.EditarEjercicio(ej))
+                    {
+                        MessageBox.Show("Se edito el ejercicio");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo editar el ejercicio");
+                    }
+                    CargarEjercicios();
+                    Btn_Agregar.Enabled = true;
+                    Btn_Editar.Enabled = false;
+                    Btn_Eliminar.Enabled = false;
+                    LimpiarCuadros();
+                }
+                else
+                {
+                    throw new Exception("El id es invalido");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(!int.TryParse(Tbox_Id.Text, out int i))
+                {
+                    throw new Exception("El id no es valido");
+                }
+                int id = int.Parse(Tbox_Id.Text);
+
+                if (LogEjercicio.Instancia.EliminarEjercicio(id))
+                {
+                    MessageBox.Show("Se elimino el ejercicio");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el ejercicio");
+                }
+                CargarEjercicios();
+                Btn_Agregar.Enabled = true;
+                Btn_Editar.Enabled = false;
+                Btn_Eliminar.Enabled = false;
+                LimpiarCuadros();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

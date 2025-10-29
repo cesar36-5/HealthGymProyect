@@ -38,5 +38,10 @@ namespace HealthGym.CapaLogica
         {
             return DatEjercicio.Instancia.BuscarEjercicios(id);
         }
+
+        public bool EliminarEjercicio(int id)
+        {
+            return DatEjercicio.Instancia.EliminarEjercicio(id);
+        }
     }
 }
