@@ -31,9 +31,9 @@
             Dgv_Ejercicios = new DataGridView();
             Gbox_Ejercicio = new GroupBox();
             label5 = new Label();
-            comboBox1 = new ComboBox();
+            Cbox_Enfoque = new ComboBox();
             label4 = new Label();
-            textBox1 = new TextBox();
+            Tbox_Desc = new TextBox();
             label3 = new Label();
             Cbox_Dificultad = new ComboBox();
             label2 = new Label();
@@ -43,6 +43,7 @@
             Btn_Agregar = new Button();
             Btn_Editar = new Button();
             Btn_Eliminar = new Button();
+            Btn_Cancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)Dgv_Ejercicios).BeginInit();
             Gbox_Ejercicio.SuspendLayout();
             SuspendLayout();
@@ -59,13 +60,14 @@
             Dgv_Ejercicios.ReadOnly = true;
             Dgv_Ejercicios.Size = new Size(796, 282);
             Dgv_Ejercicios.TabIndex = 0;
+            Dgv_Ejercicios.CellDoubleClick += Dgv_Ejercicios_CellDoubleClick;
             // 
             // Gbox_Ejercicio
             // 
             Gbox_Ejercicio.Controls.Add(label5);
-            Gbox_Ejercicio.Controls.Add(comboBox1);
+            Gbox_Ejercicio.Controls.Add(Cbox_Enfoque);
             Gbox_Ejercicio.Controls.Add(label4);
-            Gbox_Ejercicio.Controls.Add(textBox1);
+            Gbox_Ejercicio.Controls.Add(Tbox_Desc);
             Gbox_Ejercicio.Controls.Add(label3);
             Gbox_Ejercicio.Controls.Add(Cbox_Dificultad);
             Gbox_Ejercicio.Controls.Add(label2);
@@ -88,14 +90,14 @@
             label5.TabIndex = 9;
             label5.Text = "Enfoque";
             // 
-            // comboBox1
+            // Cbox_Enfoque
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Facil", "Medio", "Dificil" });
-            comboBox1.Location = new Point(352, 37);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 8;
+            Cbox_Enfoque.FormattingEnabled = true;
+            Cbox_Enfoque.Items.AddRange(new object[] { "Tren inferior", "Tren superior" });
+            Cbox_Enfoque.Location = new Point(352, 37);
+            Cbox_Enfoque.Name = "Cbox_Enfoque";
+            Cbox_Enfoque.Size = new Size(121, 23);
+            Cbox_Enfoque.TabIndex = 8;
             // 
             // label4
             // 
@@ -106,12 +108,12 @@
             label4.TabIndex = 7;
             label4.Text = "Descripcion tecnica";
             // 
-            // textBox1
+            // Tbox_Desc
             // 
-            textBox1.Location = new Point(19, 86);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(611, 23);
-            textBox1.TabIndex = 6;
+            Tbox_Desc.Location = new Point(19, 86);
+            Tbox_Desc.Name = "Tbox_Desc";
+            Tbox_Desc.Size = new Size(611, 23);
+            Tbox_Desc.TabIndex = 6;
             // 
             // label3
             // 
@@ -130,6 +132,7 @@
             Cbox_Dificultad.Name = "Cbox_Dificultad";
             Cbox_Dificultad.Size = new Size(121, 23);
             Cbox_Dificultad.TabIndex = 4;
+            Cbox_Dificultad.SelectedIndexChanged += Cbox_Dificultad_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -162,6 +165,7 @@
             Tbox_Id.Name = "Tbox_Id";
             Tbox_Id.Size = new Size(61, 23);
             Tbox_Id.TabIndex = 0;
+            Tbox_Id.KeyDown += Tbox_Id_KeyDown;
             // 
             // Btn_Agregar
             // 
@@ -190,11 +194,22 @@
             Btn_Eliminar.Text = "Eliminar";
             Btn_Eliminar.UseVisualStyleBackColor = true;
             // 
+            // Btn_Cancelar
+            // 
+            Btn_Cancelar.Location = new Point(667, 396);
+            Btn_Cancelar.Name = "Btn_Cancelar";
+            Btn_Cancelar.Size = new Size(141, 23);
+            Btn_Cancelar.TabIndex = 5;
+            Btn_Cancelar.Text = "Cancelar";
+            Btn_Cancelar.UseVisualStyleBackColor = true;
+            Btn_Cancelar.Click += Btn_Cancelar_Click;
+            // 
             // MantenedorEjercicios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(820, 450);
+            Controls.Add(Btn_Cancelar);
             Controls.Add(Btn_Eliminar);
             Controls.Add(Btn_Editar);
             Controls.Add(Btn_Agregar);
@@ -222,9 +237,10 @@
         private TextBox Tbox_Nombre;
         private ComboBox Cbox_Dificultad;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox Tbox_Desc;
         private Label label3;
         private Label label5;
-        private ComboBox comboBox1;
+        private ComboBox Cbox_Enfoque;
+        private Button Btn_Cancelar;
     }
 }

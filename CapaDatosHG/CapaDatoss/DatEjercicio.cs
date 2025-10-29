@@ -57,6 +57,41 @@ namespace HealthGym.CapaDatos
             return ejercicios;
         }
 
+        public EntEjercicio BuscarEjercicios(int id)
+        {
+            SqlCommand cmd = null;
+            EntEjercicio ejercicio = null;
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("BuscarEjercicio", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    ejercicio = new EntEjercicio();
+                    ejercicio.Id = Convert.ToInt32(dr["ID"]);
+                    ejercicio.Nombre = dr["Nombre"].ToString();
+                    ejercicio.Dificultad = dr["Dificultad"].ToString();
+                    ejercicio.AtributoTecnico = Convert.ToBoolean(dr["AtributoTecnico"]);
+                    ejercicio.Descripcion = dr["DescripcionTecnica"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return ejercicio;
+        }
+
         public bool AgregarEjercicio(EntEjercicio ejercicio)
         {
             SqlCommand cmd = null;

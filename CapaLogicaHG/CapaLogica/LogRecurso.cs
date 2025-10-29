@@ -1,4 +1,5 @@
 ﻿using HealthGym.CapaDatos.RecursosDeportivos;
+using HealthGym.CapaEntidad;
 using HealthGym.CapaEntidad.RecursosDeportivos;
 using System;
 using System.Collections.Generic;

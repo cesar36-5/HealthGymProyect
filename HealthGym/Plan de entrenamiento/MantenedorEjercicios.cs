@@ -18,6 +18,7 @@ namespace HealthGym.Plan_de_entrenamiento
         {
             InitializeComponent();
             Cbox_Dificultad.SelectedIndex = 0;
+            Cbox_Enfoque.SelectedIndex = 0;
             Btn_Editar.Enabled = false;
             Btn_Eliminar.Enabled = false;
             CargarEjercicios();
@@ -92,6 +93,102 @@ namespace HealthGym.Plan_de_entrenamiento
                 e.Value = b ? "Tren superior" : "Tren inferior";
                 e.FormattingApplied = true;
             }
+        }
+
+        private void Tbox_Id_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    e.SuppressKeyPress = true;
+
+                    int id = int.Parse(Tbox_Id.Text);
+                    CargarEjercicio(id);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
+        private void Dgv_Ejercicios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            var fila = Dgv_Ejercicios.Rows[e.RowIndex];
+
+            EntEjercicio ejercicioSeleccionado = fila.DataBoundItem as EntEjercicio;
+
+            if (ejercicioSeleccionado != null)
+            {
+                Tbox_Id.Enabled = false;
+                CargarEjercicio(ejercicioSeleccionado.Id);
+            }
+        }
+
+        private void CargarEjercicio(int id)
+        {
+            try
+            {
+                EntEjercicio e = null;
+                e = LogEjercicio.Instancia.BuscarEjercicio(id);
+
+                if (e == null)
+                {
+                    throw new Exception("No se encontro un ejercicio con ese id");
+                }
+
+                Btn_Agregar.Enabled = false;
+                Btn_Editar.Enabled = true;
+
+                Tbox_Nombre.Text = e.Nombre;
+                Tbox_Desc.Text = e.Descripcion;
+
+                if (e.AtributoTecnico)
+                {
+                    Cbox_Enfoque.SelectedIndex = 1;
+                }
+                else if (!e.AtributoTecnico)
+                {
+                    Cbox_Enfoque.SelectedIndex = 0;
+                }
+
+                if (e.Dificultad == "1")
+                {
+                    Cbox_Enfoque.SelectedIndex = -1;
+                }
+                else if (e.Dificultad == "2")
+                {
+                    Cbox_Enfoque.SelectedIndex = 0;
+                }
+                else
+                {
+                    Cbox_Enfoque.SelectedIndex = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
+        private void Btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            Btn_Agregar.Enabled = true;
+            Btn_Editar.Enabled = false;
+            Btn_Eliminar.Enabled = false;
+            Tbox_Nombre.Text = "";
+            Tbox_Desc.Text = "";
+            Cbox_Enfoque.SelectedItem = 0;
+            Cbox_Enfoque.SelectedIndex = 0;
+        }
+
+        private void Cbox_Dificultad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(Cbox_Dificultad.SelectedIndex.ToString());
         }
     }
 }
