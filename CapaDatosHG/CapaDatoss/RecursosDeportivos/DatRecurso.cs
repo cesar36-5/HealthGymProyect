@@ -43,7 +43,7 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -82,7 +82,7 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}\n\nStackTrace:\n{ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
             }
 
             return disponibilidad;
@@ -111,11 +111,11 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
             }
             catch (SqlException ex)
             {
-                MessageBox.Show($"Error SQL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error general: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
             }
 
             return inserta;
@@ -144,11 +144,11 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
             }
             catch (SqlException ex)
             {
-                MessageBox.Show($"Error SQL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error general: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
             }
 
             return inserta;

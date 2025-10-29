@@ -30,6 +30,9 @@
         {
             Dgv_Ejercicios = new DataGridView();
             Gbox_Ejercicio = new GroupBox();
+            label4 = new Label();
+            textBox1 = new TextBox();
+            label3 = new Label();
             Cbox_Dificultad = new ComboBox();
             label2 = new Label();
             Tbox_Nombre = new TextBox();
@@ -38,9 +41,8 @@
             Btn_Agregar = new Button();
             Btn_Editar = new Button();
             Btn_Eliminar = new Button();
-            label3 = new Label();
-            label4 = new Label();
-            textBox1 = new TextBox();
+            label5 = new Label();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)Dgv_Ejercicios).BeginInit();
             Gbox_Ejercicio.SuspendLayout();
             SuspendLayout();
@@ -60,6 +62,8 @@
             // 
             // Gbox_Ejercicio
             // 
+            Gbox_Ejercicio.Controls.Add(label5);
+            Gbox_Ejercicio.Controls.Add(comboBox1);
             Gbox_Ejercicio.Controls.Add(label4);
             Gbox_Ejercicio.Controls.Add(textBox1);
             Gbox_Ejercicio.Controls.Add(label3);
@@ -74,6 +78,31 @@
             Gbox_Ejercicio.TabIndex = 1;
             Gbox_Ejercicio.TabStop = false;
             Gbox_Ejercicio.Text = "Datos Ejercicio";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(19, 68);
+            label4.Name = "label4";
+            label4.Size = new Size(110, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Descripcion tecnica";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(19, 86);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(611, 23);
+            textBox1.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(225, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 15);
+            label3.TabIndex = 5;
+            label3.Text = "Dificultad";
             // 
             // Cbox_Dificultad
             // 
@@ -143,30 +172,23 @@
             Btn_Eliminar.Text = "Eliminar";
             Btn_Eliminar.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // label5
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(225, 19);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Dificultad";
+            label5.AutoSize = true;
+            label5.Location = new Point(352, 19);
+            label5.Name = "label5";
+            label5.Size = new Size(58, 15);
+            label5.TabIndex = 9;
+            label5.Text = "Dificultad";
             // 
-            // label4
+            // comboBox1
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(19, 68);
-            label4.Name = "label4";
-            label4.Size = new Size(110, 15);
-            label4.TabIndex = 7;
-            label4.Text = "Descripcion tecnica";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(19, 86);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(611, 23);
-            textBox1.TabIndex = 6;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Facil", "Medio", "Dificil" });
+            comboBox1.Location = new Point(352, 37);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 8;
             // 
             // MantenedorEjercicios
             // 
@@ -202,5 +224,7 @@
         private Label label4;
         private TextBox textBox1;
         private Label label3;
+        private Label label5;
+        private ComboBox comboBox1;
     }
 }
