@@ -14,18 +14,12 @@ public class Conexion
     public SqlConnection Conectar()
     {
         SqlConnection cn = new SqlConnection(
-            "Server=localhost\\SQLEXPRESS;" +
+            "Server=localhost;" +
             "Database=HealthGym;" +
             "Integrated Security=True;" +
             "TrustServerCertificate=True;" +
-            "Encrypt=False;");
+            "Encrypt=False;"+
+            "user=sa; password=12345678;");
         return cn;
-    }
-    public static string Cadena =
-            "Server=localhost;Database=HealthGymDB;Trusted_Connection=True;TrustServerCertificate=True;";
-
-    public SqlConnection GetConexion()
-    {
-        return new SqlConnection(Cadena);
     }
 }

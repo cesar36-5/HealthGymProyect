@@ -70,10 +70,10 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
                         EntRecursoDisponibilidad disp = new EntRecursoDisponibilidad();
                         disp.Recurso = recurso.Id;
 
-                        int diaSemana = Convert.ToInt32(dr["DiaSemana"]);
+                        DateTime diaSemana = (DateTime)(dr["Fecha"]);
                         TimeSpan horaInicio = (TimeSpan)dr["Hora"];
 
-                        disp.Dia = diaSemana;
+                        disp.Dia = diaSemana.Date;
                         disp.Hora = horaInicio;
 
                         disponibilidad.Add(disp);
@@ -101,7 +101,7 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@Id", disp.Recurso);
-                    cmd.Parameters.AddWithValue("@DiaSemana", disp.Dia);
+                    cmd.Parameters.AddWithValue("@Fecha", disp.Dia);
                     cmd.Parameters.AddWithValue("@HoraInicio", disp.Hora);
 
                     cn.Open();
@@ -121,7 +121,7 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
             return inserta;
         }
 
-        public bool BorrarSeparacion(int id, int dia, TimeSpan hora)
+        public bool BorrarSeparacion(int id, DateTime dia, TimeSpan hora)
         {
             SqlCommand cmd = null;
             bool inserta = false;
@@ -134,7 +134,7 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@Id", id);
-                    cmd.Parameters.AddWithValue("@Dia", dia);
+                    cmd.Parameters.AddWithValue("@Fecha", dia);
                     cmd.Parameters.AddWithValue("@Hora", hora);
 
                     cn.Open();

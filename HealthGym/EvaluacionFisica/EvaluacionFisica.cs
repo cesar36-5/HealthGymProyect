@@ -91,6 +91,11 @@ namespace HealthGym.EvaluacionFisica
                 MessageBox.Show("Error al cargar las evaluaciones: " + ex.Message);
             }
         }
+
+        private void EvaluacionFisica_2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -9,7 +9,7 @@ namespace HealthGym.CapaEntidad.RecursosDeportivos
     public class EntRecursoDisponibilidad
     {
         public int Recurso {  get; set; }
-        public int Dia { get; set; }
+        public DateTime Dia { get; set; }
         public TimeSpan Hora {  get; set; }
     }
 }

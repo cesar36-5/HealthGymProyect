@@ -35,7 +35,7 @@ namespace HealthGym.CapaLogica
             return DatRecurso.Instancia.SepararRecurso(r);
         }
 
-        public bool BorrarSeparacion(int id, int dia, TimeSpan hora)
+        public bool BorrarSeparacion(int id, DateTime dia, TimeSpan hora)
         {
             return DatRecurso.Instancia.BorrarSeparacion(id, dia, hora);
         }

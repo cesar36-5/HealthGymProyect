@@ -11,7 +11,7 @@ namespace CapaDatoss
 
         public bool InsertarHistoria(EntHistoriaClinica h)
         {
-            using (SqlConnection sqlCn = new SqlConnection(Conexion.Cadena))
+            using (SqlConnection sqlCn = Conexion.Instancia.Conectar())
             {
                 SqlCommand cmd = new SqlCommand("sp_InsertarHistoriaClinica", sqlCn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -31,7 +31,7 @@ namespace CapaDatoss
         public List<EntHistoriaClinica> Consultar(string dni, DateTime desde, DateTime hasta)
         {
             var lista = new List<EntHistoriaClinica>();
-            using (SqlConnection cn = new SqlConnection(Conexion.Cadena))
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
                 SqlCommand cmd = new SqlCommand("sp_ConsultarHistoriaClinica", cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
