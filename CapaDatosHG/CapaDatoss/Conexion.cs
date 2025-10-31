@@ -14,12 +14,11 @@ public class Conexion
     public SqlConnection Conectar()
     {
         SqlConnection cn = new SqlConnection(
-            "Server=localhost;" +
+            "Server=localhost\\SQLEXPRESS;" +
             "Database=HealthGym;" +
-            "user=sa;" +
-            "Password=12345678;" +
-            "Encrypt=True;" +
-            "TrustServerCertificate=True;");
+            "Integrated Security=True;" +
+            "TrustServerCertificate=True;" +
+            "Encrypt=False;");
         return cn;
     }
     public static string Cadena =
