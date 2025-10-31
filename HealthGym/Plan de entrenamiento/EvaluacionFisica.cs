@@ -1,5 +1,6 @@
 ﻿using CapaEntidadHG.CapaEntidad;
 using CapaLogicaHG;
+using HealthGym.EvaluacionFisica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,5 +96,15 @@ namespace HealthGym.Plan_de_entrenamiento
         {
             Clipboard.SetText(Btn_CopiarId.Text);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            HistoriaClinica formulario = new HistoriaClinica();
+
+            formulario.Show();
+
+            this.Hide();
+        }
     }
+    
 }
