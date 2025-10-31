@@ -413,6 +413,7 @@
             Controls.Add(groupMiembro);
             Controls.Add(dgvMiembros);
             Name = "MantenedorMiembro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MantenedorMiembro";
             ((System.ComponentModel.ISupportInitialize)dgvMiembros).EndInit();
             groupMiembro.ResumeLayout(false);

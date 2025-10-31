@@ -89,7 +89,7 @@
             gbxBuscar.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gbxBuscar.Location = new Point(24, 16);
             gbxBuscar.Name = "gbxBuscar";
-            gbxBuscar.Size = new Size(1094, 607);
+            gbxBuscar.Size = new Size(1085, 607);
             gbxBuscar.TabIndex = 1;
             gbxBuscar.TabStop = false;
             gbxBuscar.Text = "Buscar Mienbro";
@@ -275,10 +275,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1130, 635);
+            ClientSize = new Size(1121, 622);
             Controls.Add(gbxBuscar);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "HistoriaClinica";
+            StartPosition = FormStartPosition.CenterScreen;
             gbxBuscar.ResumeLayout(false);
             gbxBuscar.PerformLayout();
             ResumeLayout(false);

@@ -55,10 +55,12 @@
             Dgv_Ejercicios.AllowUserToResizeColumns = false;
             Dgv_Ejercicios.AllowUserToResizeRows = false;
             Dgv_Ejercicios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Dgv_Ejercicios.Location = new Point(12, 12);
+            Dgv_Ejercicios.Location = new Point(14, 16);
+            Dgv_Ejercicios.Margin = new Padding(3, 4, 3, 4);
             Dgv_Ejercicios.Name = "Dgv_Ejercicios";
             Dgv_Ejercicios.ReadOnly = true;
-            Dgv_Ejercicios.Size = new Size(796, 282);
+            Dgv_Ejercicios.RowHeadersWidth = 51;
+            Dgv_Ejercicios.Size = new Size(997, 376);
             Dgv_Ejercicios.TabIndex = 0;
             Dgv_Ejercicios.CellDoubleClick += Dgv_Ejercicios_CellDoubleClick;
             // 
@@ -74,9 +76,11 @@
             Gbox_Ejercicio.Controls.Add(Tbox_Nombre);
             Gbox_Ejercicio.Controls.Add(label1);
             Gbox_Ejercicio.Controls.Add(Tbox_Id);
-            Gbox_Ejercicio.Location = new Point(12, 300);
+            Gbox_Ejercicio.Location = new Point(14, 400);
+            Gbox_Ejercicio.Margin = new Padding(3, 4, 3, 4);
             Gbox_Ejercicio.Name = "Gbox_Ejercicio";
-            Gbox_Ejercicio.Size = new Size(649, 138);
+            Gbox_Ejercicio.Padding = new Padding(3, 4, 3, 4);
+            Gbox_Ejercicio.Size = new Size(742, 184);
             Gbox_Ejercicio.TabIndex = 1;
             Gbox_Ejercicio.TabStop = false;
             Gbox_Ejercicio.Text = "Datos Ejercicio";
@@ -84,9 +88,9 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(352, 19);
+            label5.Location = new Point(402, 25);
             label5.Name = "label5";
-            label5.Size = new Size(51, 15);
+            label5.Size = new Size(64, 20);
             label5.TabIndex = 9;
             label5.Text = "Enfoque";
             // 
@@ -94,33 +98,35 @@
             // 
             Cbox_Enfoque.FormattingEnabled = true;
             Cbox_Enfoque.Items.AddRange(new object[] { "Tren inferior", "Tren superior" });
-            Cbox_Enfoque.Location = new Point(352, 37);
+            Cbox_Enfoque.Location = new Point(402, 49);
+            Cbox_Enfoque.Margin = new Padding(3, 4, 3, 4);
             Cbox_Enfoque.Name = "Cbox_Enfoque";
-            Cbox_Enfoque.Size = new Size(121, 23);
+            Cbox_Enfoque.Size = new Size(138, 28);
             Cbox_Enfoque.TabIndex = 8;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(19, 68);
+            label4.Location = new Point(22, 91);
             label4.Name = "label4";
-            label4.Size = new Size(110, 15);
+            label4.Size = new Size(138, 20);
             label4.TabIndex = 7;
             label4.Text = "Descripcion tecnica";
             // 
             // Tbox_Desc
             // 
-            Tbox_Desc.Location = new Point(19, 86);
+            Tbox_Desc.Location = new Point(22, 115);
+            Tbox_Desc.Margin = new Padding(3, 4, 3, 4);
             Tbox_Desc.Name = "Tbox_Desc";
-            Tbox_Desc.Size = new Size(611, 23);
+            Tbox_Desc.Size = new Size(698, 27);
             Tbox_Desc.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(225, 19);
+            label3.Location = new Point(257, 25);
             label3.Name = "label3";
-            label3.Size = new Size(58, 15);
+            label3.Size = new Size(74, 20);
             label3.TabIndex = 5;
             label3.Text = "Dificultad";
             // 
@@ -128,50 +134,54 @@
             // 
             Cbox_Dificultad.FormattingEnabled = true;
             Cbox_Dificultad.Items.AddRange(new object[] { "Facil", "Medio", "Dificil" });
-            Cbox_Dificultad.Location = new Point(225, 37);
+            Cbox_Dificultad.Location = new Point(257, 49);
+            Cbox_Dificultad.Margin = new Padding(3, 4, 3, 4);
             Cbox_Dificultad.Name = "Cbox_Dificultad";
-            Cbox_Dificultad.Size = new Size(121, 23);
+            Cbox_Dificultad.Size = new Size(138, 28);
             Cbox_Dificultad.TabIndex = 4;
             Cbox_Dificultad.SelectedIndexChanged += Cbox_Dificultad_SelectedIndexChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(86, 19);
+            label2.Location = new Point(98, 25);
             label2.Name = "label2";
-            label2.Size = new Size(51, 15);
+            label2.Size = new Size(64, 20);
             label2.TabIndex = 3;
             label2.Text = "Nombre";
             // 
             // Tbox_Nombre
             // 
-            Tbox_Nombre.Location = new Point(86, 37);
+            Tbox_Nombre.Location = new Point(98, 49);
+            Tbox_Nombre.Margin = new Padding(3, 4, 3, 4);
             Tbox_Nombre.Name = "Tbox_Nombre";
-            Tbox_Nombre.Size = new Size(133, 23);
+            Tbox_Nombre.Size = new Size(151, 27);
             Tbox_Nombre.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(19, 19);
+            label1.Location = new Point(22, 25);
             label1.Name = "label1";
-            label1.Size = new Size(17, 15);
+            label1.Size = new Size(22, 20);
             label1.TabIndex = 1;
             label1.Text = "Id";
             // 
             // Tbox_Id
             // 
-            Tbox_Id.Location = new Point(19, 37);
+            Tbox_Id.Location = new Point(22, 49);
+            Tbox_Id.Margin = new Padding(3, 4, 3, 4);
             Tbox_Id.Name = "Tbox_Id";
-            Tbox_Id.Size = new Size(61, 23);
+            Tbox_Id.Size = new Size(69, 27);
             Tbox_Id.TabIndex = 0;
             Tbox_Id.KeyDown += Tbox_Id_KeyDown;
             // 
             // Btn_Agregar
             // 
-            Btn_Agregar.Location = new Point(667, 309);
+            Btn_Agregar.Location = new Point(834, 412);
+            Btn_Agregar.Margin = new Padding(3, 4, 3, 4);
             Btn_Agregar.Name = "Btn_Agregar";
-            Btn_Agregar.Size = new Size(141, 23);
+            Btn_Agregar.Size = new Size(161, 31);
             Btn_Agregar.TabIndex = 2;
             Btn_Agregar.Text = "Agregar";
             Btn_Agregar.UseVisualStyleBackColor = true;
@@ -179,9 +189,10 @@
             // 
             // Btn_Editar
             // 
-            Btn_Editar.Location = new Point(667, 338);
+            Btn_Editar.Location = new Point(834, 451);
+            Btn_Editar.Margin = new Padding(3, 4, 3, 4);
             Btn_Editar.Name = "Btn_Editar";
-            Btn_Editar.Size = new Size(141, 23);
+            Btn_Editar.Size = new Size(161, 31);
             Btn_Editar.TabIndex = 3;
             Btn_Editar.Text = "Editar";
             Btn_Editar.UseVisualStyleBackColor = true;
@@ -189,9 +200,10 @@
             // 
             // Btn_Eliminar
             // 
-            Btn_Eliminar.Location = new Point(667, 367);
+            Btn_Eliminar.Location = new Point(834, 491);
+            Btn_Eliminar.Margin = new Padding(3, 4, 3, 4);
             Btn_Eliminar.Name = "Btn_Eliminar";
-            Btn_Eliminar.Size = new Size(141, 23);
+            Btn_Eliminar.Size = new Size(161, 31);
             Btn_Eliminar.TabIndex = 4;
             Btn_Eliminar.Text = "Eliminar";
             Btn_Eliminar.UseVisualStyleBackColor = true;
@@ -199,9 +211,10 @@
             // 
             // Btn_Cancelar
             // 
-            Btn_Cancelar.Location = new Point(667, 396);
+            Btn_Cancelar.Location = new Point(834, 530);
+            Btn_Cancelar.Margin = new Padding(3, 4, 3, 4);
             Btn_Cancelar.Name = "Btn_Cancelar";
-            Btn_Cancelar.Size = new Size(141, 23);
+            Btn_Cancelar.Size = new Size(161, 31);
             Btn_Cancelar.TabIndex = 5;
             Btn_Cancelar.Text = "Cancelar";
             Btn_Cancelar.UseVisualStyleBackColor = true;
@@ -209,16 +222,18 @@
             // 
             // MantenedorEjercicios
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(820, 450);
+            ClientSize = new Size(1045, 622);
             Controls.Add(Btn_Cancelar);
             Controls.Add(Btn_Eliminar);
             Controls.Add(Btn_Editar);
             Controls.Add(Btn_Agregar);
             Controls.Add(Gbox_Ejercicio);
             Controls.Add(Dgv_Ejercicios);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "MantenedorEjercicios";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MantenedorEjercicios";
             Load += MantenedorEjercicios_Load;
             ((System.ComponentModel.ISupportInitialize)Dgv_Ejercicios).EndInit();

@@ -362,6 +362,7 @@
             Controls.Add(grpDatosTrabajador);
             Controls.Add(dgvTrabajador);
             Name = "MantenedorTrabajador";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MantenedorTrabajador";
             ((System.ComponentModel.ISupportInitialize)dgvTrabajador).EndInit();
             grpDatosTrabajador.ResumeLayout(false);
