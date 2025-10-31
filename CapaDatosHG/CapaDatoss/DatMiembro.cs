@@ -13,7 +13,8 @@ public class DatMiembro
     {
         get { return DatMiembro._instancia; }
     }
-    //ACTUALIZAR
+    //ACTUALIZAR B
+
     #endregion
 
     #region Metodos
