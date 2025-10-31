@@ -72,9 +72,11 @@
             gbPlanNutri.Controls.Add(cboDia);
             gbPlanNutri.Controls.Add(rtbDatosEva);
             gbPlanNutri.Controls.Add(dateTimePicker1);
-            gbPlanNutri.Location = new Point(12, 7);
+            gbPlanNutri.Location = new Point(14, 9);
+            gbPlanNutri.Margin = new Padding(3, 4, 3, 4);
             gbPlanNutri.Name = "gbPlanNutri";
-            gbPlanNutri.Size = new Size(307, 431);
+            gbPlanNutri.Padding = new Padding(3, 4, 3, 4);
+            gbPlanNutri.Size = new Size(351, 575);
             gbPlanNutri.TabIndex = 0;
             gbPlanNutri.TabStop = false;
             gbPlanNutri.Text = "Plan Nutricional";
@@ -82,24 +84,26 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(10, 179);
+            label5.Location = new Point(11, 239);
             label5.Name = "label5";
-            label5.Size = new Size(81, 15);
+            label5.Size = new Size(101, 20);
             label5.TabIndex = 15;
             label5.Text = "Evaluacion N°";
             // 
             // txtEvaluacionNutricional
             // 
-            txtEvaluacionNutricional.Location = new Point(112, 176);
+            txtEvaluacionNutricional.Location = new Point(128, 235);
+            txtEvaluacionNutricional.Margin = new Padding(3, 4, 3, 4);
             txtEvaluacionNutricional.Name = "txtEvaluacionNutricional";
-            txtEvaluacionNutricional.Size = new Size(185, 23);
+            txtEvaluacionNutricional.Size = new Size(211, 27);
             txtEvaluacionNutricional.TabIndex = 14;
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(161, 402);
+            btnModificar.Location = new Point(184, 536);
+            btnModificar.Margin = new Padding(3, 4, 3, 4);
             btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(136, 23);
+            btnModificar.Size = new Size(155, 31);
             btnModificar.TabIndex = 13;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
@@ -107,9 +111,10 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(10, 402);
+            btnAgregar.Location = new Point(11, 536);
+            btnAgregar.Margin = new Padding(3, 4, 3, 4);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(145, 23);
+            btnAgregar.Size = new Size(166, 31);
             btnAgregar.TabIndex = 12;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -118,118 +123,128 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(9, 355);
+            label4.Location = new Point(10, 473);
             label4.Name = "label4";
-            label4.Size = new Size(98, 15);
+            label4.Size = new Size(123, 20);
             label4.TabIndex = 11;
             label4.Text = "Valor Nutricional:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(9, 311);
+            label3.Location = new Point(10, 415);
             label3.Name = "label3";
-            label3.Size = new Size(125, 15);
+            label3.Size = new Size(157, 20);
             label3.TabIndex = 10;
             label3.Text = "Nombre del Alimento:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(9, 267);
+            label2.Location = new Point(10, 356);
             label2.Name = "label2";
-            label2.Size = new Size(137, 15);
+            label2.Size = new Size(172, 20);
             label2.TabIndex = 9;
             label2.Text = "Tipo de Plan Nutricional:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(9, 239);
+            label1.Location = new Point(10, 319);
             label1.Name = "label1";
-            label1.Size = new Size(90, 15);
+            label1.Size = new Size(114, 20);
             label1.TabIndex = 8;
             label1.Text = "Comida del día:";
             // 
             // lblDia
             // 
             lblDia.AutoSize = true;
-            lblDia.Location = new Point(10, 210);
+            lblDia.Location = new Point(11, 280);
             lblDia.Name = "lblDia";
-            lblDia.Size = new Size(97, 15);
+            lblDia.Size = new Size(126, 20);
             lblDia.TabIndex = 7;
             lblDia.Text = "Día de la Semana";
             // 
             // txtValorNutricional
             // 
-            txtValorNutricional.Location = new Point(9, 373);
+            txtValorNutricional.Location = new Point(10, 497);
+            txtValorNutricional.Margin = new Padding(3, 4, 3, 4);
             txtValorNutricional.Name = "txtValorNutricional";
-            txtValorNutricional.Size = new Size(288, 23);
+            txtValorNutricional.Size = new Size(329, 27);
             txtValorNutricional.TabIndex = 6;
             // 
             // txtAlimento
             // 
-            txtAlimento.Location = new Point(9, 329);
+            txtAlimento.Location = new Point(10, 439);
+            txtAlimento.Margin = new Padding(3, 4, 3, 4);
             txtAlimento.Name = "txtAlimento";
-            txtAlimento.Size = new Size(288, 23);
+            txtAlimento.Size = new Size(329, 27);
             txtAlimento.TabIndex = 5;
             // 
             // txtTipo
             // 
-            txtTipo.Location = new Point(9, 285);
+            txtTipo.Location = new Point(10, 380);
+            txtTipo.Margin = new Padding(3, 4, 3, 4);
             txtTipo.Name = "txtTipo";
-            txtTipo.Size = new Size(288, 23);
+            txtTipo.Size = new Size(329, 27);
             txtTipo.TabIndex = 4;
             // 
             // cboComida
             // 
             cboComida.FormattingEnabled = true;
             cboComida.Items.AddRange(new object[] { "Desayuno", "Almuerzo", "Cena" });
-            cboComida.Location = new Point(112, 234);
+            cboComida.Location = new Point(128, 312);
+            cboComida.Margin = new Padding(3, 4, 3, 4);
             cboComida.Name = "cboComida";
-            cboComida.Size = new Size(185, 23);
+            cboComida.Size = new Size(211, 28);
             cboComida.TabIndex = 3;
             // 
             // cboDia
             // 
             cboDia.FormattingEnabled = true;
             cboDia.Items.AddRange(new object[] { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado", "Domingo" });
-            cboDia.Location = new Point(112, 205);
+            cboDia.Location = new Point(128, 273);
+            cboDia.Margin = new Padding(3, 4, 3, 4);
             cboDia.Name = "cboDia";
-            cboDia.Size = new Size(185, 23);
+            cboDia.Size = new Size(211, 28);
             cboDia.TabIndex = 2;
             // 
             // rtbDatosEva
             // 
-            rtbDatosEva.Location = new Point(9, 52);
+            rtbDatosEva.Location = new Point(10, 69);
+            rtbDatosEva.Margin = new Padding(3, 4, 3, 4);
             rtbDatosEva.Name = "rtbDatosEva";
             rtbDatosEva.ReadOnly = true;
-            rtbDatosEva.Size = new Size(288, 116);
+            rtbDatosEva.Size = new Size(329, 153);
             rtbDatosEva.TabIndex = 1;
             rtbDatosEva.Text = "";
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Enabled = false;
-            dateTimePicker1.Location = new Point(97, 22);
+            dateTimePicker1.Location = new Point(111, 29);
+            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.Size = new Size(228, 27);
             dateTimePicker1.TabIndex = 0;
             // 
             // dgvPlanNutri
             // 
             dgvPlanNutri.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPlanNutri.Location = new Point(325, 15);
+            dgvPlanNutri.Location = new Point(371, 20);
+            dgvPlanNutri.Margin = new Padding(3, 4, 3, 4);
             dgvPlanNutri.Name = "dgvPlanNutri";
-            dgvPlanNutri.Size = new Size(463, 394);
+            dgvPlanNutri.RowHeadersWidth = 51;
+            dgvPlanNutri.Size = new Size(726, 525);
             dgvPlanNutri.TabIndex = 1;
             dgvPlanNutri.CellDoubleClick += dgvPlanNutri_CellDoubleClick;
             // 
             // btnNuevo
             // 
-            btnNuevo.Location = new Point(325, 415);
+            btnNuevo.Location = new Point(459, 553);
+            btnNuevo.Margin = new Padding(3, 4, 3, 4);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(140, 23);
+            btnNuevo.Size = new Size(160, 31);
             btnNuevo.TabIndex = 2;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = true;
@@ -237,9 +252,10 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(472, 415);
+            btnEditar.Location = new Point(642, 553);
+            btnEditar.Margin = new Padding(3, 4, 3, 4);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(140, 23);
+            btnEditar.Size = new Size(160, 31);
             btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -247,9 +263,10 @@
             // 
             // btnDeshabilitarAlim
             // 
-            btnDeshabilitarAlim.Location = new Point(618, 415);
+            btnDeshabilitarAlim.Location = new Point(832, 553);
+            btnDeshabilitarAlim.Margin = new Padding(3, 4, 3, 4);
             btnDeshabilitarAlim.Name = "btnDeshabilitarAlim";
-            btnDeshabilitarAlim.Size = new Size(170, 23);
+            btnDeshabilitarAlim.Size = new Size(194, 31);
             btnDeshabilitarAlim.TabIndex = 4;
             btnDeshabilitarAlim.Text = "Deshabilitar Alimentos";
             btnDeshabilitarAlim.UseVisualStyleBackColor = true;
@@ -262,15 +279,17 @@
             // 
             // Plan_Nutricional
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1121, 622);
             Controls.Add(btnDeshabilitarAlim);
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(dgvPlanNutri);
             Controls.Add(gbPlanNutri);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Plan_Nutricional";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PlanNutricional";
             gbPlanNutri.ResumeLayout(false);
             gbPlanNutri.PerformLayout();
