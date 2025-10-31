@@ -13,6 +13,7 @@ namespace HealthGym
 {
     public partial class MantenedorMiembro : Form
     {
+        //agregue
         public MantenedorMiembro()
         {
             InitializeComponent();
