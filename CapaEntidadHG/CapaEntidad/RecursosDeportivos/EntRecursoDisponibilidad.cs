@@ -11,5 +11,6 @@ namespace HealthGym.CapaEntidad.RecursosDeportivos
         public int Recurso {  get; set; }
         public DateTime Dia { get; set; }
         public TimeSpan Hora {  get; set; }
+        public long? Plan {  get; set; }
     }
 }

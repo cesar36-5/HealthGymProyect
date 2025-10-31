@@ -33,8 +33,9 @@
             comboBox1 = new ComboBox();
             button1 = new Button();
             button2 = new Button();
-            textBox1 = new TextBox();
+            Tbox_plan = new TextBox();
             Dgv_Disponibilidad = new DataGridView();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)Dgv_Disponibilidad).BeginInit();
             SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 128);
+            button1.Location = new Point(12, 147);
             button1.Name = "button1";
             button1.Size = new Size(223, 23);
             button1.TabIndex = 6;
@@ -77,7 +78,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(12, 157);
+            button2.Location = new Point(12, 176);
             button2.Name = "button2";
             button2.Size = new Size(223, 23);
             button2.TabIndex = 7;
@@ -85,12 +86,13 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // textBox1
+            // Tbox_plan
             // 
-            textBox1.Location = new Point(12, 99);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(223, 23);
-            textBox1.TabIndex = 8;
+            Tbox_plan.Location = new Point(14, 118);
+            Tbox_plan.Name = "Tbox_plan";
+            Tbox_plan.Size = new Size(223, 23);
+            Tbox_plan.TabIndex = 8;
+            Tbox_plan.Text = "1111111";
             // 
             // Dgv_Disponibilidad
             // 
@@ -101,13 +103,23 @@
             Dgv_Disponibilidad.TabIndex = 9;
             Dgv_Disponibilidad.CellDoubleClick += Dgv_Disponibilidad_CellDoubleClick;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(14, 99);
+            label1.Name = "label1";
+            label1.Size = new Size(159, 15);
+            label1.TabIndex = 10;
+            label1.Text = "Id del Plan de Entrenamiento";
+            // 
             // AsignacionRecursos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(850, 403);
+            Controls.Add(label1);
             Controls.Add(Dgv_Disponibilidad);
-            Controls.Add(textBox1);
+            Controls.Add(Tbox_plan);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(comboBox1);
@@ -128,7 +140,8 @@
         private ComboBox comboBox1;
         private Button button1;
         private Button button2;
-        private TextBox textBox1;
+        private TextBox Tbox_plan;
         private DataGridView Dgv_Disponibilidad;
+        private Label label1;
     }
 }

@@ -57,7 +57,7 @@ namespace HealthGym.Plan_de_entrenamiento
                 EntRecursoDisponibilidad disp = new EntRecursoDisponibilidad();
 
                 disp.Recurso = recursoSeleccionado.Id;
-
+                disp.Plan = long.Parse(Tbox_plan.Text);
                 disp.Dia = dateTimePicker1.Value;
 
                 TimeSpan horaInicio = new TimeSpan(dateTimePicker2.Value.Hour, 0, 0);
@@ -96,7 +96,7 @@ namespace HealthGym.Plan_de_entrenamiento
         {
             try
             {
-                if(LogRecurso.Instancia.BorrarSeparacion(recursoSeleccionado.Id, recursDispSeleccionado.Dia, recursDispSeleccionado.Hora))
+                if(LogRecurso.Instancia.BorrarSeparacion(recursoSeleccionado.Id, recursDispSeleccionado.Dia, recursDispSeleccionado.Hora, long.Parse(Tbox_plan.Text)))
                 {
                     CargarHorario(recursoSeleccionado);
                     button2.Enabled = true;

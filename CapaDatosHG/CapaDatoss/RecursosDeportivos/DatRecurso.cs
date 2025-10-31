@@ -72,9 +72,14 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
 
                         DateTime diaSemana = (DateTime)(dr["Fecha"]);
                         TimeSpan horaInicio = (TimeSpan)dr["Hora"];
+                        //long plan = (long)dr["PlanEntrenamiento"];
+                        long? plan = dr.IsDBNull(dr.GetOrdinal("PlanEntrenamiento"))
+                            ? (long?)null
+                            : (long)dr["PlanEntrenamiento"];
 
                         disp.Dia = diaSemana.Date;
                         disp.Hora = horaInicio;
+                        disp.Plan = plan;
 
                         disponibilidad.Add(disp);
                     }
@@ -103,6 +108,7 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
                     cmd.Parameters.AddWithValue("@Id", disp.Recurso);
                     cmd.Parameters.AddWithValue("@Fecha", disp.Dia);
                     cmd.Parameters.AddWithValue("@HoraInicio", disp.Hora);
+                    cmd.Parameters.AddWithValue("@Plan", disp.Plan);
 
                     cn.Open();
                     int i = cmd.ExecuteNonQuery();
@@ -121,7 +127,7 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
             return inserta;
         }
 
-        public bool BorrarSeparacion(int id, DateTime dia, TimeSpan hora)
+        public bool BorrarSeparacion(int id, DateTime dia, TimeSpan hora, long plan)
         {
             SqlCommand cmd = null;
             bool inserta = false;
@@ -136,6 +142,7 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
                     cmd.Parameters.AddWithValue("@Id", id);
                     cmd.Parameters.AddWithValue("@Fecha", dia);
                     cmd.Parameters.AddWithValue("@Hora", hora);
+                    //cmd.Parameters.AddWithValue("@Plan", plan);
 
                     cn.Open();
                     int i = cmd.ExecuteNonQuery();
