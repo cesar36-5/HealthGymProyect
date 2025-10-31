@@ -39,5 +39,15 @@ namespace HealthGym.CapaLogica
         {
             return DatRecurso.Instancia.BorrarSeparacion(id, dia, hora, plan);
         }
+
+        public bool AgregarRecursoDeportivo(EntRecurso e)
+        {
+            return DatRecurso.Instancia.AgregarRecursoDeportivo(e);
+        }
+
+        public bool EditarRecursoDeportivo(EntRecurso e)
+        {
+            return DatRecurso.Instancia.EditarRecursoDeportivo(e);
+        }
     }
 }

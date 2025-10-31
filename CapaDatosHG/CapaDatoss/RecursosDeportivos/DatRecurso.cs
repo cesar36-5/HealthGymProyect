@@ -52,6 +52,63 @@ namespace HealthGym.CapaDatos.RecursosDeportivos
             return recursos;
         }
 
+        public bool AgregarRecursoDeportivo(EntRecurso r)
+        {
+            SqlCommand cmd = null;
+            bool inserta = false;
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("InsertarRecursoDeportivos", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Nombre", r.Nombre);
+                cn.Open();
+
+                int i = cmd.ExecuteNonQuery();
+                inserta = i > 0;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return inserta;
+        }
+
+        public bool EditarRecursoDeportivo(EntRecurso r)
+        {
+            SqlCommand cmd = null;
+            bool inserta = false;
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("EditarRecursoDeportivos", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Nombre", r.Nombre);
+                cmd.Parameters.AddWithValue("@Id", r.Id);
+                cn.Open();
+
+                int i = cmd.ExecuteNonQuery();
+                inserta = i > 0;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return inserta;
+        }
+
         public List<EntRecursoDisponibilidad> ListarDisponibilidad(EntRecurso recurso)
         {
             List<EntRecursoDisponibilidad> disponibilidad = new List<EntRecursoDisponibilidad>();

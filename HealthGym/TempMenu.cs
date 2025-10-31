@@ -47,5 +47,17 @@ namespace HealthGym
             EvaluacionFisica.EvaluacionFisica_2 m = new EvaluacionFisica.EvaluacionFisica_2();
             m.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MantenedorHorario m = new MantenedorHorario();
+            m.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MantenedorRecursosDeportivos m = new MantenedorRecursosDeportivos();
+            m.Show();
+        }
     }
 }
