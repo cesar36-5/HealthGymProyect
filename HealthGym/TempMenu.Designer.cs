@@ -34,17 +34,15 @@
             button4 = new Button();
             button6 = new Button();
             button3 = new Button();
-            button7 = new Button();
             button5 = new Button();
             button8 = new Button();
-            button9 = new Button();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(488, 302);
+            button1.Location = new Point(488, 248);
             button1.Name = "button1";
             button1.Size = new Size(114, 45);
             button1.TabIndex = 0;
@@ -92,19 +90,9 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click_1;
             // 
-            // button7
-            // 
-            button7.Location = new Point(488, 116);
-            button7.Name = "button7";
-            button7.Size = new Size(115, 34);
-            button7.TabIndex = 6;
-            button7.Text = "Evaluacion Fisica";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
-            // 
             // button5
             // 
-            button5.Location = new Point(488, 371);
+            button5.Location = new Point(488, 313);
             button5.Name = "button5";
             button5.Size = new Size(115, 34);
             button5.TabIndex = 8;
@@ -114,24 +102,13 @@
             // 
             // button8
             // 
-            button8.Location = new Point(487, 224);
+            button8.Location = new Point(488, 162);
             button8.Name = "button8";
             button8.Size = new Size(115, 61);
             button8.TabIndex = 9;
             button8.Text = "Mantenedor Recurso \r\nDeportivo\r\n";
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
-            // 
-            // button9
-            // 
-            button9.Location = new Point(487, 171);
-            button9.Margin = new Padding(3, 2, 3, 2);
-            button9.Name = "button9";
-            button9.Size = new Size(115, 34);
-            button9.TabIndex = 10;
-            button9.Text = "Historia Clínica";
-            button9.UseVisualStyleBackColor = true;
-            button9.Click += button9_Click;
             // 
             // pictureBox1
             // 
@@ -155,9 +132,7 @@
             Controls.Add(button8);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(button9);
             Controls.Add(button5);
-            Controls.Add(button7);
             Controls.Add(pictureBox1);
             Name = "TempMenu";
             StartPosition = FormStartPosition.CenterScreen;
@@ -173,10 +148,8 @@
         private Button button4;
         private Button button6;
         private Button button3;
-        private Button button7;
         private Button button5;
         private Button button8;
-        private Button button9;
         private PictureBox pictureBox1;
     }
 }

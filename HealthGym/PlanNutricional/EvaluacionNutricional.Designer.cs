@@ -75,21 +75,18 @@
             gbDatos.Controls.Add(lblId);
             gbDatos.Controls.Add(lblResponsable);
             gbDatos.Controls.Add(dateTimePicker1);
-            gbDatos.Location = new Point(570, 16);
-            gbDatos.Margin = new Padding(3, 4, 3, 4);
+            gbDatos.Location = new Point(499, 12);
             gbDatos.Name = "gbDatos";
-            gbDatos.Padding = new Padding(3, 4, 3, 4);
-            gbDatos.Size = new Size(503, 568);
+            gbDatos.Size = new Size(440, 426);
             gbDatos.TabIndex = 0;
             gbDatos.TabStop = false;
             gbDatos.Text = "Evaluación Nutricional";
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(71, 523);
-            btnModificar.Margin = new Padding(3, 4, 3, 4);
+            btnModificar.Location = new Point(62, 392);
             btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(294, 31);
+            btnModificar.Size = new Size(257, 23);
             btnModificar.TabIndex = 16;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
@@ -98,36 +95,35 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(14, 287);
+            label6.Location = new Point(12, 215);
             label6.Name = "label6";
-            label6.Size = new Size(185, 20);
+            label6.Size = new Size(147, 15);
             label6.TabIndex = 15;
             label6.Text = "Requerimiento Energético:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(14, 219);
+            label5.Location = new Point(12, 164);
             label5.Name = "label5";
-            label5.Size = new Size(76, 20);
+            label5.Size = new Size(62, 15);
             label5.TabIndex = 14;
             label5.Text = "Evolución:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(14, 147);
+            label4.Location = new Point(12, 110);
             label4.Name = "label4";
-            label4.Size = new Size(108, 20);
+            label4.Size = new Size(87, 15);
             label4.TabIndex = 13;
             label4.Text = "Observaciones:";
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(70, 521);
-            btnAgregar.Margin = new Padding(3, 4, 3, 4);
+            btnAgregar.Location = new Point(61, 391);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(295, 31);
+            btnAgregar.Size = new Size(258, 23);
             btnAgregar.TabIndex = 2;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -136,85 +132,78 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(14, 477);
+            label3.Location = new Point(12, 358);
             label3.Name = "label3";
-            label3.Size = new Size(81, 20);
+            label3.Size = new Size(64, 15);
             label3.TabIndex = 12;
             label3.Text = "Objetivo 3:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(9, 427);
+            label2.Location = new Point(8, 320);
             label2.Name = "label2";
-            label2.Size = new Size(81, 20);
+            label2.Size = new Size(64, 15);
             label2.TabIndex = 11;
             label2.Text = "Objetivo 2:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(9, 379);
+            label1.Location = new Point(8, 284);
             label1.Name = "label1";
-            label1.Size = new Size(81, 20);
+            label1.Size = new Size(64, 15);
             label1.TabIndex = 10;
             label1.Text = "Objetivo 1:";
             // 
             // txtObjetivo3
             // 
-            txtObjetivo3.Location = new Point(107, 471);
-            txtObjetivo3.Margin = new Padding(3, 4, 3, 4);
+            txtObjetivo3.Location = new Point(94, 353);
             txtObjetivo3.Name = "txtObjetivo3";
-            txtObjetivo3.Size = new Size(317, 27);
+            txtObjetivo3.Size = new Size(278, 23);
             txtObjetivo3.TabIndex = 9;
             // 
             // txtObjetivo2
             // 
-            txtObjetivo2.Location = new Point(107, 424);
-            txtObjetivo2.Margin = new Padding(3, 4, 3, 4);
+            txtObjetivo2.Location = new Point(94, 318);
             txtObjetivo2.Name = "txtObjetivo2";
-            txtObjetivo2.Size = new Size(317, 27);
+            txtObjetivo2.Size = new Size(278, 23);
             txtObjetivo2.TabIndex = 8;
             // 
             // txtObjetivo1
             // 
-            txtObjetivo1.Location = new Point(107, 372);
-            txtObjetivo1.Margin = new Padding(3, 4, 3, 4);
+            txtObjetivo1.Location = new Point(94, 279);
             txtObjetivo1.Name = "txtObjetivo1";
-            txtObjetivo1.Size = new Size(317, 27);
+            txtObjetivo1.Size = new Size(278, 23);
             txtObjetivo1.TabIndex = 7;
             // 
             // txtReqEnergetico
             // 
-            txtReqEnergetico.Location = new Point(14, 319);
-            txtReqEnergetico.Margin = new Padding(3, 4, 3, 4);
+            txtReqEnergetico.Location = new Point(12, 239);
             txtReqEnergetico.Name = "txtReqEnergetico";
-            txtReqEnergetico.Size = new Size(167, 27);
+            txtReqEnergetico.Size = new Size(147, 23);
             txtReqEnergetico.TabIndex = 6;
             // 
             // txtEvolucion
             // 
-            txtEvolucion.Location = new Point(14, 243);
-            txtEvolucion.Margin = new Padding(3, 4, 3, 4);
+            txtEvolucion.Location = new Point(12, 182);
             txtEvolucion.Name = "txtEvolucion";
-            txtEvolucion.Size = new Size(411, 27);
+            txtEvolucion.Size = new Size(360, 23);
             txtEvolucion.TabIndex = 5;
             // 
             // txtObservaciones
             // 
-            txtObservaciones.Location = new Point(14, 179);
-            txtObservaciones.Margin = new Padding(3, 4, 3, 4);
+            txtObservaciones.Location = new Point(12, 134);
             txtObservaciones.Name = "txtObservaciones";
-            txtObservaciones.Size = new Size(411, 27);
+            txtObservaciones.Size = new Size(360, 23);
             txtObservaciones.TabIndex = 4;
             // 
             // chkSaludable
             // 
             chkSaludable.AutoSize = true;
-            chkSaludable.Location = new Point(221, 120);
-            chkSaludable.Margin = new Padding(3, 4, 3, 4);
+            chkSaludable.Location = new Point(193, 90);
             chkSaludable.Name = "chkSaludable";
-            chkSaludable.Size = new Size(208, 24);
+            chkSaludable.Size = new Size(165, 19);
             chkSaludable.TabIndex = 3;
             chkSaludable.Text = "¿Tiene hábitos saludables?";
             chkSaludable.UseVisualStyleBackColor = true;
@@ -222,47 +211,44 @@
             // lblId
             // 
             lblId.AutoSize = true;
-            lblId.Location = new Point(27, 99);
+            lblId.Location = new Point(24, 74);
             lblId.Name = "lblId";
-            lblId.Size = new Size(92, 20);
+            lblId.Size = new Size(73, 15);
             lblId.TabIndex = 2;
             lblId.Text = "ID miembro:";
             // 
             // lblResponsable
             // 
             lblResponsable.AutoSize = true;
-            lblResponsable.Location = new Point(27, 64);
+            lblResponsable.Location = new Point(24, 48);
             lblResponsable.Name = "lblResponsable";
-            lblResponsable.Size = new Size(82, 20);
+            lblResponsable.Size = new Size(64, 15);
             lblResponsable.TabIndex = 1;
             lblResponsable.Text = "A cargo de";
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Enabled = false;
-            dateTimePicker1.Location = new Point(191, 27);
-            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker1.Location = new Point(167, 20);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(228, 27);
+            dateTimePicker1.Size = new Size(230, 23);
             dateTimePicker1.TabIndex = 0;
             // 
             // dgvEvaNutricional
             // 
             dgvEvaNutricional.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEvaNutricional.Location = new Point(14, 63);
-            dgvEvaNutricional.Margin = new Padding(3, 4, 3, 4);
+            dgvEvaNutricional.Location = new Point(12, 47);
             dgvEvaNutricional.Name = "dgvEvaNutricional";
             dgvEvaNutricional.RowHeadersWidth = 51;
-            dgvEvaNutricional.Size = new Size(536, 521);
+            dgvEvaNutricional.Size = new Size(469, 391);
             dgvEvaNutricional.TabIndex = 1;
             dgvEvaNutricional.CellDoubleClick += dgvEvaNutricional_CellDoubleClick;
             // 
             // btnNuevo
             // 
-            btnNuevo.Location = new Point(14, 15);
-            btnNuevo.Margin = new Padding(3, 4, 3, 4);
+            btnNuevo.Location = new Point(12, 11);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(123, 31);
+            btnNuevo.Size = new Size(108, 23);
             btnNuevo.TabIndex = 3;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = true;
@@ -270,10 +256,9 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(149, 15);
-            btnEditar.Margin = new Padding(3, 4, 3, 4);
+            btnEditar.Location = new Point(130, 11);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(123, 31);
+            btnEditar.Size = new Size(108, 23);
             btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -281,10 +266,9 @@
             // 
             // btnDeshabilitar
             // 
-            btnDeshabilitar.Location = new Point(282, 15);
-            btnDeshabilitar.Margin = new Padding(3, 4, 3, 4);
+            btnDeshabilitar.Location = new Point(247, 11);
             btnDeshabilitar.Name = "btnDeshabilitar";
-            btnDeshabilitar.Size = new Size(160, 31);
+            btnDeshabilitar.Size = new Size(140, 23);
             btnDeshabilitar.TabIndex = 5;
             btnDeshabilitar.Text = "Deshabilitar Objetivos";
             btnDeshabilitar.UseVisualStyleBackColor = true;
@@ -292,15 +276,14 @@
             // 
             // EvaluacionNutricional
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1121, 622);
+            ClientSize = new Size(981, 466);
             Controls.Add(btnDeshabilitar);
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(dgvEvaNutricional);
             Controls.Add(gbDatos);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "EvaluacionNutricional";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EvaluacionNutricional";

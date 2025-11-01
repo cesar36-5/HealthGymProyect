@@ -91,13 +91,13 @@ namespace HealthGym.PlanNutricional
         private void dgvEvaNutricional_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow filaActual = dgvEvaNutricional.Rows[e.RowIndex]; //
-            chkSaludable.Checked = Convert.ToBoolean(filaActual.Cells[0].Value);
-            txtObservaciones.Text = filaActual.Cells[1].Value.ToString();
-            txtEvolucion.Text = filaActual.Cells[2].Value.ToString();
-            txtReqEnergetico.Text = filaActual.Cells[3].Value.ToString();
-            txtObjetivo1.Text = filaActual.Cells[4].Value.ToString();
-            txtObjetivo2.Text = filaActual.Cells[5].Value.ToString();
-            txtObjetivo3.Text = filaActual.Cells[6].Value.ToString();
+            chkSaludable.Checked = Convert.ToBoolean(filaActual.Cells[1].Value);
+            txtObservaciones.Text = filaActual.Cells[2].Value.ToString();
+            txtEvolucion.Text = filaActual.Cells[3].Value.ToString();
+            txtReqEnergetico.Text = filaActual.Cells[4].Value.ToString();
+            txtObjetivo1.Text = filaActual.Cells[5].Value.ToString();
+            txtObjetivo2.Text = filaActual.Cells[6].Value.ToString();
+            txtObjetivo3.Text = filaActual.Cells[7].Value.ToString();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using CapaEntidadHG.EvaluacionFisica;
 
 namespace CapaDatosHG.EvaluacionFisica
@@ -11,7 +11,7 @@ namespace CapaDatosHG.EvaluacionFisica
 
         public bool ValidarCita(string dni)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = Conexion.Instancia.Conectar())
             {
                 string query = "SELECT COUNT(*) FROM Citas WHERE DNI = @DNI AND Estado = 'Activa'";
                 SqlCommand cmd = new SqlCommand(query, connection);
@@ -25,7 +25,7 @@ namespace CapaDatosHG.EvaluacionFisica
 
         public bool InsertarEvaluacion(EntEvaluacionFisica evaluacion)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = Conexion.Instancia.Conectar())
             {
                 string query = @"INSERT INTO EvaluacionFisica 
                                 (DniMiembro, FechaEvaluacion, Peso, Altura, FrecuenciaCardiaca, PresionSistolica, 
@@ -59,7 +59,7 @@ namespace CapaDatosHG.EvaluacionFisica
         public DataTable ListarEvaluacionesPorDni(string dni)
         {
             DataTable tabla = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = Conexion.Instancia.Conectar())
             {
                 string query = "SELECT * FROM EvaluacionFisica WHERE DniMiembro = @DNI";
                 SqlCommand cmd = new SqlCommand(query, connection);
@@ -73,7 +73,7 @@ namespace CapaDatosHG.EvaluacionFisica
 
         public DataTable ListarEvaluaciones()
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = Conexion.Instancia.Conectar())
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM EvaluacionFisica", connection);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -84,7 +84,7 @@ namespace CapaDatosHG.EvaluacionFisica
         }
         public DataRow ObtenerDatosMiembroPorDni(string dni)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = Conexion.Instancia.Conectar())
             {
                 string query = @"SELECT TOP 1 Nombre, Apellido, DNI 
                          FROM Miembros
