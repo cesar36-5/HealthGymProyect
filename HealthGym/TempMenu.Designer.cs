@@ -37,12 +37,14 @@
             button5 = new Button();
             button8 = new Button();
             pictureBox1 = new PictureBox();
+            Btn_EvFisica = new Button();
+            Btn_hClinica = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(488, 248);
+            button1.Location = new Point(487, 224);
             button1.Name = "button1";
             button1.Size = new Size(114, 45);
             button1.TabIndex = 0;
@@ -92,7 +94,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(488, 313);
+            button5.Location = new Point(487, 284);
             button5.Name = "button5";
             button5.Size = new Size(115, 34);
             button5.TabIndex = 8;
@@ -102,7 +104,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(488, 162);
+            button8.Location = new Point(487, 136);
             button8.Name = "button8";
             button8.Size = new Size(115, 61);
             button8.TabIndex = 9;
@@ -121,11 +123,33 @@
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
+            // Btn_EvFisica
+            // 
+            Btn_EvFisica.Location = new Point(487, 324);
+            Btn_EvFisica.Name = "Btn_EvFisica";
+            Btn_EvFisica.Size = new Size(115, 34);
+            Btn_EvFisica.TabIndex = 12;
+            Btn_EvFisica.Text = "Evaluacion fisica";
+            Btn_EvFisica.UseVisualStyleBackColor = true;
+            Btn_EvFisica.Click += Btn_EvFisica_Click;
+            // 
+            // Btn_hClinica
+            // 
+            Btn_hClinica.Location = new Point(487, 371);
+            Btn_hClinica.Name = "Btn_hClinica";
+            Btn_hClinica.Size = new Size(115, 34);
+            Btn_hClinica.TabIndex = 13;
+            Btn_hClinica.Text = "Historia clinica";
+            Btn_hClinica.UseVisualStyleBackColor = true;
+            Btn_hClinica.Click += Btn_hClinica_Click;
+            // 
             // TempMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(819, 524);
+            Controls.Add(Btn_hClinica);
+            Controls.Add(Btn_EvFisica);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(button6);
@@ -151,5 +175,7 @@
         private Button button5;
         private Button button8;
         private PictureBox pictureBox1;
+        private Button Btn_EvFisica;
+        private Button Btn_hClinica;
     }
 }

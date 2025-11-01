@@ -83,5 +83,17 @@ namespace HealthGym
             EvaluacionNutricional m = new EvaluacionNutricional();
             m.Show();
         }
+
+        private void Btn_EvFisica_Click(object sender, EventArgs e)
+        {
+            EvaluacionFisica.EvaluacionFisica_2 m = new EvaluacionFisica.EvaluacionFisica_2();
+            m.Show();
+        }
+
+        private void Btn_hClinica_Click(object sender, EventArgs e)
+        {
+            EvaluacionFisica.HistoriaClinica m = new EvaluacionFisica.HistoriaClinica();
+            m.Show();
+        }
     }
 }
