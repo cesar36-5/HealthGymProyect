@@ -20,7 +20,6 @@ namespace HealthGym.Plan_de_entrenamiento
             Cbox_Dificultad.SelectedIndex = 0;
             Cbox_Enfoque.SelectedIndex = 0;
             Btn_Editar.Enabled = false;
-            Btn_Eliminar.Enabled = false;
             CargarEjercicios();
         }
 
@@ -32,7 +31,6 @@ namespace HealthGym.Plan_de_entrenamiento
         private void CargarEjercicios()
         {
             Btn_Editar.Enabled = false;
-            Btn_Eliminar.Enabled = false;
 
             List<EntEjercicio> ejercicios = LogEjercicio.Instancia.ListarEjercicios();
 
@@ -125,7 +123,6 @@ namespace HealthGym.Plan_de_entrenamiento
             if (ejercicioSeleccionado != null)
             {
                 Tbox_Id.Enabled = false;
-                Btn_Eliminar.Enabled = true;
                 CargarEjercicio(ejercicioSeleccionado.Id);
             }
         }
@@ -182,7 +179,6 @@ namespace HealthGym.Plan_de_entrenamiento
         {
             Btn_Agregar.Enabled = true;
             Btn_Editar.Enabled = false;
-            Btn_Eliminar.Enabled = false;
             LimpiarCuadros();
         }
         private void LimpiarCuadros()
@@ -288,7 +284,6 @@ namespace HealthGym.Plan_de_entrenamiento
                     CargarEjercicios();
                     Btn_Agregar.Enabled = true;
                     Btn_Editar.Enabled = false;
-                    Btn_Eliminar.Enabled = false;
                     LimpiarCuadros();
                 }
                 else
@@ -323,7 +318,6 @@ namespace HealthGym.Plan_de_entrenamiento
                 CargarEjercicios();
                 Btn_Agregar.Enabled = true;
                 Btn_Editar.Enabled = false;
-                Btn_Eliminar.Enabled = false;
                 LimpiarCuadros();
             }
             catch(Exception ex)

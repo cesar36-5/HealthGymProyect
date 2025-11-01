@@ -35,7 +35,10 @@ namespace HealthGym.Plan_de_entrenamiento
             try
             {
                 string nombre = Tbox_Nombre.Text;
-
+                if (string.IsNullOrWhiteSpace(nombre.Trim()))
+                {
+                    throw new Exception("Debe ingresar un nombre");
+                }
                 EntRecurso r = new EntRecurso();
                 r.Nombre = nombre;
 
@@ -83,6 +86,11 @@ namespace HealthGym.Plan_de_entrenamiento
         {
             try
             {
+                string n = Tbox_Nombre.Text;
+                if (string.IsNullOrWhiteSpace(n.Trim()))
+                {
+                    throw new Exception("Debe ingresar un nombre");
+                }
                 rSeleccionado.Nombre = Tbox_Nombre.Text;
                 if (LogRecurso.Instancia.EditarRecursoDeportivo(rSeleccionado))
                 {
