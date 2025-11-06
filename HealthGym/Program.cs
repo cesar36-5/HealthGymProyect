@@ -1,4 +1,4 @@
-using HealthGym.Plan_de_entrenamiento;
+
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
@@ -14,7 +14,9 @@ namespace HealthGym
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new EvaluacionFisica());
+
+            //inicializar proyec
+            Application.Run(new Monitoreo());
         }
     }
 }
