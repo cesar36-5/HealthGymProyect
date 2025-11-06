@@ -16,5 +16,10 @@ namespace HealthGym
         {
             InitializeComponent();
         }
+        //mantenedor
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,6 +30,24 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
+            button1 = new Button();
+            checkBox1 = new CheckBox();
+            label16 = new Label();
+            label15 = new Label();
+            comboBox3 = new ComboBox();
+            label14 = new Label();
+            label13 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            label12 = new Label();
+            textBox2 = new TextBox();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            textBox1 = new TextBox();
+            txtGrasa = new TextBox();
+            label8 = new Label();
+            comboBox1 = new ComboBox();
+            label7 = new Label();
             cboxActvidad = new ComboBox();
             label6 = new Label();
             label5 = new Label();
@@ -41,24 +59,6 @@
             dataGridView1 = new DataGridView();
             label2 = new Label();
             txtDNI = new TextBox();
-            label7 = new Label();
-            comboBox1 = new ComboBox();
-            label8 = new Label();
-            txtGrasa = new TextBox();
-            textBox1 = new TextBox();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            textBox2 = new TextBox();
-            label12 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            label13 = new Label();
-            label14 = new Label();
-            comboBox3 = new ComboBox();
-            label15 = new Label();
-            label16 = new Label();
-            checkBox1 = new CheckBox();
-            button1 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -105,6 +105,162 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos Fisicos";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(850, 76);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 29;
+            button1.Text = "Calcular";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(525, 66);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(97, 24);
+            checkBox1.TabIndex = 27;
+            checkBox1.Text = "Saludable";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(72, 117);
+            label16.Name = "label16";
+            label16.Size = new Size(33, 20);
+            label16.TabIndex = 24;
+            label16.Text = "imc";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(524, 200);
+            label15.Name = "label15";
+            label15.Size = new Size(68, 20);
+            label15.TabIndex = 26;
+            label15.Text = "Progreso";
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "Saludable", "No Saludable" });
+            comboBox3.Location = new Point(523, 229);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(151, 28);
+            comboBox3.TabIndex = 25;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(357, 237);
+            label14.Name = "label14";
+            label14.Size = new Size(69, 20);
+            label14.TabIndex = 24;
+            label14.Text = "Objetivo:";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(357, 195);
+            label13.Name = "label13";
+            label13.Size = new Size(71, 20);
+            label13.TabIndex = 23;
+            label13.Text = "Progreso:";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(523, 150);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(268, 27);
+            dateTimePicker1.TabIndex = 22;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(357, 152);
+            label12.Name = "label12";
+            label12.Size = new Size(54, 20);
+            label12.TabIndex = 21;
+            label12.Text = "Fecha: ";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(525, 108);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(266, 27);
+            textBox2.TabIndex = 20;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(357, 109);
+            label11.Name = "label11";
+            label11.Size = new Size(90, 20);
+            label11.TabIndex = 19;
+            label11.Text = "Comentario:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(357, 69);
+            label10.Name = "label10";
+            label10.Size = new Size(92, 20);
+            label10.TabIndex = 17;
+            label10.Text = "Alimetación:";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(357, 30);
+            label9.Name = "label9";
+            label9.Size = new Size(161, 20);
+            label9.TabIndex = 16;
+            label9.Text = "Porcentaje de Musculo:\r\n";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(524, 24);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(151, 27);
+            textBox1.TabIndex = 15;
+            // 
+            // txtGrasa
+            // 
+            txtGrasa.Location = new Point(160, 237);
+            txtGrasa.Name = "txtGrasa";
+            txtGrasa.Size = new Size(151, 27);
+            txtGrasa.TabIndex = 13;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(11, 240);
+            label8.Name = "label8";
+            label8.Size = new Size(143, 20);
+            label8.TabIndex = 12;
+            label8.Text = "Porcentaja de Grasa:";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "1 día a la semana", "", "2 días a la semana", "", "3 días a la semana", "", "4 días a la semana", "", "5 días a la semana", "", "6 días a la semana", "", "Todos los días" });
+            comboBox1.Location = new Point(160, 192);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 11;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(11, 195);
+            label7.Name = "label7";
+            label7.Size = new Size(82, 20);
+            label7.TabIndex = 10;
+            label7.Text = "Frecuencia:";
+            label7.Click += label7_Click;
             // 
             // cboxActvidad
             // 
@@ -192,6 +348,7 @@
             label2.Size = new Size(38, 20);
             label2.TabIndex = 4;
             label2.Text = "DNI:";
+            label2.Click += label2_Click;
             // 
             // txtDNI
             // 
@@ -199,162 +356,6 @@
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(125, 27);
             txtDNI.TabIndex = 5;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(11, 195);
-            label7.Name = "label7";
-            label7.Size = new Size(82, 20);
-            label7.TabIndex = 10;
-            label7.Text = "Frecuencia:";
-            label7.Click += label7_Click;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "1 día a la semana", "", "2 días a la semana", "", "3 días a la semana", "", "4 días a la semana", "", "5 días a la semana", "", "6 días a la semana", "", "Todos los días" });
-            comboBox1.Location = new Point(160, 192);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 11;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(11, 240);
-            label8.Name = "label8";
-            label8.Size = new Size(143, 20);
-            label8.TabIndex = 12;
-            label8.Text = "Porcentaja de Grasa:";
-            // 
-            // txtGrasa
-            // 
-            txtGrasa.Location = new Point(160, 237);
-            txtGrasa.Name = "txtGrasa";
-            txtGrasa.Size = new Size(151, 27);
-            txtGrasa.TabIndex = 13;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(524, 24);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(151, 27);
-            textBox1.TabIndex = 15;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(357, 30);
-            label9.Name = "label9";
-            label9.Size = new Size(161, 20);
-            label9.TabIndex = 16;
-            label9.Text = "Porcentaje de Musculo:\r\n";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(357, 69);
-            label10.Name = "label10";
-            label10.Size = new Size(92, 20);
-            label10.TabIndex = 17;
-            label10.Text = "Alimetación:";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(357, 109);
-            label11.Name = "label11";
-            label11.Size = new Size(90, 20);
-            label11.TabIndex = 19;
-            label11.Text = "Comentario:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(525, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(266, 27);
-            textBox2.TabIndex = 20;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(357, 152);
-            label12.Name = "label12";
-            label12.Size = new Size(54, 20);
-            label12.TabIndex = 21;
-            label12.Text = "Fecha: ";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(523, 150);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(268, 27);
-            dateTimePicker1.TabIndex = 22;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(357, 195);
-            label13.Name = "label13";
-            label13.Size = new Size(71, 20);
-            label13.TabIndex = 23;
-            label13.Text = "Progreso:";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(357, 237);
-            label14.Name = "label14";
-            label14.Size = new Size(69, 20);
-            label14.TabIndex = 24;
-            label14.Text = "Objetivo:";
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Saludable", "No Saludable" });
-            comboBox3.Location = new Point(523, 229);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 28);
-            comboBox3.TabIndex = 25;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(524, 200);
-            label15.Name = "label15";
-            label15.Size = new Size(68, 20);
-            label15.TabIndex = 26;
-            label15.Text = "Progreso";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Location = new Point(72, 117);
-            label16.Name = "label16";
-            label16.Size = new Size(33, 20);
-            label16.TabIndex = 24;
-            label16.Text = "imc";
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(525, 66);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(97, 24);
-            checkBox1.TabIndex = 27;
-            checkBox1.Text = "Saludable";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(850, 76);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 29;
-            button1.Text = "Calcular";
-            button1.UseVisualStyleBackColor = true;
             // 
             // Monitoreo
             // 

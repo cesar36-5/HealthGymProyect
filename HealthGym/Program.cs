@@ -15,7 +15,7 @@ namespace HealthGym
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            //inicializarrr
+            //inicializar proyec
             Application.Run(new Monitoreo());
         }
     }
