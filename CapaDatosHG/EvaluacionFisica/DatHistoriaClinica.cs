@@ -1,16 +1,20 @@
 ﻿using System.Data;
 using Microsoft.Data.SqlClient;
-using CapaEntidadHG; 
-using CapaEntidadHG.EvaluacionFisica; 
+using CapaEntidadHG;
+using CapaEntidadHG.EvaluacionFisica;
 
 namespace CapaDatoss
 {
     public class DatHistoriaClinica
     {
-        Conexion cn = new Conexion();
+        // NO DEBES instanciar la conexión aquí.
+        // La línea "Conexion cn = new Conexion();" es un error porque
+        // tu clase 'Conexion' es un Singleton y tiene un constructor privado.
+        // BÓRRALA.
 
         public bool InsertarHistoria(EntHistoriaClinica h)
         {
+            // Esta es la forma CORRECTA de llamar a tu conexión Singleton
             using (SqlConnection sqlCn = Conexion.Instancia.Conectar())
             {
                 SqlCommand cmd = new SqlCommand("sp_InsertarHistoriaClinica", sqlCn);
@@ -31,6 +35,8 @@ namespace CapaDatoss
         public List<EntHistoriaClinica> Consultar(string dni, DateTime desde, DateTime hasta)
         {
             var lista = new List<EntHistoriaClinica>();
+
+            // Esta también es la forma CORRECTA
             using (SqlConnection cn = Conexion.Instancia.Conectar())
             {
                 SqlCommand cmd = new SqlCommand("sp_ConsultarHistoriaClinica", cn);

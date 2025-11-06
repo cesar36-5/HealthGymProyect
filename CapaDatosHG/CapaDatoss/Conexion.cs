@@ -18,7 +18,7 @@ public class Conexion
             "Database=HealthGym;" +
             "Integrated Security=True;" +
             "TrustServerCertificate=True;" +
-            "Encrypt=False;"+
+            "Encrypt=False;" +
             "user=sa; password=12345678;");
         return cn;
     }

@@ -83,5 +83,26 @@ namespace HealthGym
             EvaluacionNutricional m = new EvaluacionNutricional();
             m.Show();
         }
+
+        private void Btn_EvFisica_Click(object sender, EventArgs e)
+        {
+            EvaluacionFisica.EvaluacionFisica_2 m = new EvaluacionFisica.EvaluacionFisica_2();
+            m.Show();
+        }
+
+        private void Btn_hClinica_Click(object sender, EventArgs e)
+        {
+            EvaluacionFisica.HistoriaClinica m = new EvaluacionFisica.HistoriaClinica();
+            m.Show();
+        }
+
+        private void btnGestionarRecetas_Click(object sender, EventArgs e)
+        {
+        
+            // El namespace es por la carpeta "PlanNutricional" donde lo guardaste
+            HealthGym.PlanNutricional.FormGestionRecetas form = new HealthGym.PlanNutricional.FormGestionRecetas();
+            form.ShowDialog(); // ShowDialog() es mejor que Show()
+        }
+    
     }
 }

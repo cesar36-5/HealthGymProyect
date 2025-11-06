@@ -1,4 +1,7 @@
-﻿namespace HealthGym
+﻿using System.Windows.Forms;
+using System.Drawing;
+
+namespace HealthGym
 {
     partial class TempMenu
     {
@@ -39,6 +42,9 @@
             button8 = new Button();
             button9 = new Button();
             pictureBox1 = new PictureBox();
+            Btn_EvFisica = new Button();
+            Btn_hClinica = new Button();
+            btnGestionarRecetas = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -144,6 +150,38 @@
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
+            // Btn_EvFisica
+            // 
+            Btn_EvFisica.Location = new Point(696, 540);
+            Btn_EvFisica.Margin = new Padding(4, 5, 4, 5);
+            Btn_EvFisica.Name = "Btn_EvFisica";
+            Btn_EvFisica.Size = new Size(164, 57);
+            Btn_EvFisica.TabIndex = 12;
+            Btn_EvFisica.Text = "Evaluacion fisica";
+            Btn_EvFisica.UseVisualStyleBackColor = true;
+            Btn_EvFisica.Click += Btn_EvFisica_Click;
+            // 
+            // Btn_hClinica
+            // 
+            Btn_hClinica.Location = new Point(696, 618);
+            Btn_hClinica.Margin = new Padding(4, 5, 4, 5);
+            Btn_hClinica.Name = "Btn_hClinica";
+            Btn_hClinica.Size = new Size(164, 57);
+            Btn_hClinica.TabIndex = 13;
+            Btn_hClinica.Text = "Historia clinica";
+            Btn_hClinica.UseVisualStyleBackColor = true;
+            Btn_hClinica.Click += Btn_hClinica_Click;
+            // 
+            // btnGestionarRecetas
+            // 
+            btnGestionarRecetas.Location = new Point(901, 697);
+            btnGestionarRecetas.Name = "btnGestionarRecetas";
+            btnGestionarRecetas.Size = new Size(151, 64);
+            btnGestionarRecetas.TabIndex = 14;
+            btnGestionarRecetas.Text = "Gestionar Recetas";
+            btnGestionarRecetas.UseVisualStyleBackColor = true;
+            btnGestionarRecetas.Click += btnGestionarRecetas_Click;
+            // 
             // TempMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -158,6 +196,9 @@
             Controls.Add(button9);
             Controls.Add(button5);
             Controls.Add(button7);
+            Controls.Add(btnGestionarRecetas);
+            Controls.Add(Btn_hClinica);
+            Controls.Add(Btn_EvFisica);
             Controls.Add(pictureBox1);
             Name = "TempMenu";
             StartPosition = FormStartPosition.CenterScreen;
@@ -178,5 +219,8 @@
         private Button button8;
         private Button button9;
         private PictureBox pictureBox1;
+        private Button Btn_EvFisica;
+        private Button Btn_hClinica;
+        private Button btnGestionarRecetas;
     }
 }
